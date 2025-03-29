@@ -1,8 +1,9 @@
 FROM php:7.4-apache
-#WORKDIR /var/www/html
-WORKDIR /project/php
+WORKDIR /var/www/html
+#WORKDIR /project/php
 #COPY . .
-COPY ./index.php /var/www/html
+COPY ./php /var/www/html
+#COPY /php/index.html /var/www/html
 
 # #FROM php:7.4-apache
 
