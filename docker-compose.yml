@@ -9,13 +9,13 @@ services:
   php-app:
       build: 
        context: ./php
-       Dockerfile: Dockerfile # ここでDockerfileを指定
+       dockerfile: Dockerfile # ここでDockerfileを指定
       ports:
         - "8080:80"
       # volumes:
       #   -./php:/var/www/html
-  depends_on:
-      -python-app:
+      depends_on:
+       python-app:
         condition: service_started
 #       version: "3.8"
 # services:
