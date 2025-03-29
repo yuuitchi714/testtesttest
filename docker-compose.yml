@@ -2,20 +2,21 @@
 services:
   python-app:
     build: ./python
+    #stdin_open: true
+    #tty: true
     ports:
       - "5001:5000"
   php-app:
-      build: ./php
-     #   context: ./php
-     #   Dockerfile: Dockerfile # ここでDockerfileを指定
+      build: 
+       context: ./php
+       Dockerfile: Dockerfile # ここでDockerfileを指定
       ports:
         - "8080:80"
       # volumes:
       #   -./php:/var/www/html
-      depends_on:
-        - python-app
-
-
+  depends_on:
+      -python-app:
+        condition: service_started
 #       version: "3.8"
 # services:
 #   app:
