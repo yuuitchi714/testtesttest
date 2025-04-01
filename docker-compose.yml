@@ -7,13 +7,15 @@ services:
     ports:
       - "5001:5000"
   php-app:
-      build: ./php
-       #context: ./php
-       #dockerfile: Dockerfile # ここでDockerfileを指定
+      build: 
+        context: ./php
+        dockerfile: Dockerfile # ここでDockerfileを指定
       ports:
         - "8080:80"
       volumes:
         - ./php:/var/www/html/
+      
+        - /private/etc/apache2/httpd.conf:/usr/local/apache2/conf/httpd.conf
       depends_on:
        python-app:
         condition: service_started
