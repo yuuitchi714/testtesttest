@@ -13,9 +13,9 @@ services:
       ports:
         - "8080:80"
       volumes:
-        - ./php:/var/www/html/
-      
-        - /private/etc/apache2/httpd.conf:/usr/local/apache2/conf/httpd.conf
+        - ./php/index.html:/var/www/html/index.html
+        - ./php/index.php:/var/www/html/index.php
+        - /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/usr/local/apache2/conf/httpd.conf
       depends_on:
        python-app:
         condition: service_started
