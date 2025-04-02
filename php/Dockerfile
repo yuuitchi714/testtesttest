@@ -4,7 +4,7 @@ WORKDIR /var/www/html
 #COPY . .
 
 COPY ./php/index.html /var/www/html/index.html
-COPY /private/etc/apache2/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY /Users/ichi/path/to/your/project/php/apache2/httpd.conf /etc/apache2/apache2.conf
 #COPY /php/index.html /var/www/html
 
 # #FROM php:7.4-apache
