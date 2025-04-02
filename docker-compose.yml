@@ -15,7 +15,9 @@ services:
       volumes:
         - ./php/index.html:/var/www/html/index.html
         - ./php/index.php:/var/www/html/index.php
-        - /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/dev/etc/apache2/conf/apache2.conf
+        - /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/etc/apache2/apache2.conf
+        #- /Users/ichi/path/to/your/project/php/apache2/httpd.conf
+        #- /etc/sites-available/000-default.conf
       depends_on:
        python-app:
         condition: service_started
