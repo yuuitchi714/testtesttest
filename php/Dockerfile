@@ -4,12 +4,12 @@ WORKDIR /var/www/html
 #COPY . .
 
 COPY ./php/index.html /var/www/html/index.html
-COPY /Users/ichi/path/to/your/project/php/apache2/httpd.conf /etc/apache2/apache2.conf
+#COPY /Users/ichi/path/to/your/project/php/apache2/httpd.conf /etc/apache2/apache2.conf
 #COPY /php/index.html /var/www/html
-
+#llllllggggjjg
 # #FROM php:7.4-apache
 
-# WORKDIR /var/www/html
+#WORKDIR /var/www/html
 
 # # MySQL拡張機能をインストール
 # RUN docker-php-ext-install mysqli pdo pdo_mysql
