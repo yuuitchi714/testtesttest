@@ -18,7 +18,7 @@ services:
         #- /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/etc/apache2/apache2.conf
         - /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/etc/sites-available/000-default.conf
         #- /Users/ichi/path/to/your/project/php/apache2/docker-php.conf2:
-        - /Users/ichi/path/to/your/project/php/apache2/docker-php.conf:/etc/apache2/conf-available/docker-php.conf
+        #- /Users/ichi/path/to/your/project/php/apache2/docker-php.conf:/etc/apache2/conf-available/docker-php.conf
       depends_on:
        python-app:
         condition: service_started
