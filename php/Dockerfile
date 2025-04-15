@@ -15,15 +15,15 @@ COPY . .
 # RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # # ApacheのRewriteモジュールを有効化
-RUN a2enmod dir
+#RUN a2enmod dir
 
 # # アプリケーションのコードをコピー
 # COPY . .
 
 # # Apacheの再起動（設定の反映のため）
-RUN service apache2 restart
+#RUN service apache2 restart
 
 # # ポート80を公開
-EXPOSE 80
+#EXPOSE 80
 
 # # Apacheはデフォルトで起動

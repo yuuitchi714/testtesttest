@@ -13,13 +13,13 @@ services:
       ports:
         - "8080:80"
       volumes:
-        - /Users/ichi/path/to/your/project/php/apache2/mods-enabled:/etc/apache2/mods-enabled/
-        - /Users/ichi/path/to/your/project/php/apache2/mods-available:/etc/apache2/mods-available/
+        #- /Users/ichi/path/to/your/project/php/apache2/mods-enabled:/etc/apache2/mods-enabled/
+        #- /Users/ichi/path/to/your/project/php/apache2/mods-available:/etc/apache2/mods-available/
 
         - ./php/index.html:/var/www/html/index.html
         - ./php/index.php:/var/www/html/index.php
-        #- /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/etc/apache2/apache2.conf
-        - /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/etc/sites-available/000-default.conf
+        #- /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/var/www/html/apache2/apache2.conf
+        #- /Users/ichi/path/to/your/project/php/apache2/httpd.conf:/etc/sites-available/000-default.conf
         #- /Users/ichi/path/to/your/project/php/apache2/docker-php.conf2:
         #- /Users/ichi/path/to/your/project/php/apache2/docker-php.conf:/etc/apache2/conf-available/docker-php.conf
       depends_on:
